@@ -28,7 +28,7 @@ class AudioClassifier (nn.Module):
         self.conv2.bias.data.zero_()
         conv_layers += [self.conv2, self.relu2, self.bn2]
 
-        # Second Convolution Block
+        # Third Convolution Block
         self.conv3 = nn.Conv2d(16, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
         self.relu3 = nn.ReLU()
         self.bn3 = nn.BatchNorm2d(32)
@@ -36,7 +36,7 @@ class AudioClassifier (nn.Module):
         self.conv3.bias.data.zero_()
         conv_layers += [self.conv3, self.relu3, self.bn3]
 
-        # Second Convolution Block
+        # Fourth Convolution Block
         self.conv4 = nn.Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
         self.relu4 = nn.ReLU()
         self.bn4 = nn.BatchNorm2d(64)
